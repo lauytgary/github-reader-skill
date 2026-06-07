@@ -7,7 +7,7 @@
 <br>
 
 <!-- Language Switch -->
-<a href="#english-version">🇬🇧 English</a> &nbsp;·&nbsp; <a href="#chinese-version">🇨🇳 中文</a>
+<a href="#english-version">English</a> &nbsp;·&nbsp; <a href="#chinese-version">中文</a>
 
 <br>
 
