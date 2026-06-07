@@ -122,15 +122,15 @@ Briefly note that you fetched directly from GitHub, then answer the user's quest
 
 ## China Mainland Fallback
 
-`raw.githubusercontent.com` and `api.github.com` are intermittently blocked in mainland China by the GFW via DNS pollution and TCP reset. If a fetch fails with a timeout or connection error (not a 404 or 401):
+`raw.githubusercontent.com` and `api.github.com` are intermittently blocked in mainland China via DNS pollution and TCP reset. If a fetch fails with a timeout or connection error (not a 404 or 401):
 
 **Step 1 — Always try the original URL first.**
-Do not assume the user is behind the GFW. Attempt the standard `raw.githubusercontent.com` fetch normally.
+Attempt the standard `raw.githubusercontent.com` fetch normally.
 
 **Step 2 — On failure, ask before switching.**
 If the fetch times out or is reset, do NOT silently retry with a proxy. Instead, tell the user:
 
-> "Failed to reach `raw.githubusercontent.com` — this may be due to GFW blocking.
+> "Failed to reach `raw.githubusercontent.com` — this may be due to blocking.
 > I can retry using `gh-proxy.com` as a mirror proxy, but note it is a third-party service.
 > Would you like me to try via `gh-proxy.com`?"
 
