@@ -94,47 +94,47 @@ Made by **Gary Lau** · MIT License
 
 <div align="right"><a href="#english-version">Switch to English →</a></div>
 
-### 功能說明
+### 功能说明
 
-每當你在 AI Agent 中貼上 GitHub 連結，這個 skill 會在回答你的問題之前，自動從 GitHub 直接抓取檔案或目錄內容。
+每当你在 AI Agent 中贴上 GitHub 连结，这个 skill 会在回答你的问题之前，自动从 GitHub 直接抓取档案或目录内容。
 
-支援三種 URL 類型：
+支援三种 URL 类型：：
 
-| URL 類型 | 轉換目標 |
+| URL 类型 | 转换目标 |
 |---|---|
-| `github.com/{owner}/{repo}/blob/{branch}/{file}` | `raw.githubusercontent.com/...`（原始檔案內容）|
-| `github.com/{owner}/{repo}/tree/{branch}/{dir}` | `api.github.com/repos/.../contents/...`（目錄列表）|
+| `github.com/{owner}/{repo}/blob/{branch}/{file}` | `raw.githubusercontent.com/...`（原始档案内容）|
+| `github.com/{owner}/{repo}/tree/{branch}/{dir}` | `api.github.com/repos/.../contents/...`（目录列表）|
 | `github.com/{owner}/{repo}` | 從 `raw.githubusercontent.com` 抓取 README.md |
 
-**嚴格來源規則：** 只接受來自完全匹配原始連結的 `raw.githubusercontent.com/{owner}/{repo}/...` 的內容，不會靜默 fallback 到鏡像站、fork 或第三方網站。
+**严格来源规则：** 只接受来自完全匹配原始连结的 `raw.githubusercontent.com/{owner}/{repo}/...` 的内容，不会静默 fallback 到镜像站、fork 或第三方网站。
 
 ### 平台兼容性
 
-| Agent | 支援方式 | 安裝路徑 |
+| Agent | 支援方式 | 安装路径 |
 |---|---|---|
 | Claude Code | ✅ 原生支援 | `~/.claude/skills/` |
 | Codex CLI | ✅ 原生支援 | `~/.agents/skills/` |
 | Gemini CLI | ✅ 原生支援 | `~/.gemini/skills/` |
 | OpenCode | ✅ 原生支援 | `~/.config/opencode/skills/` |
-| Cursor | 🔄 需要轉換 | `.cursor/rules/` |
-| Windsurf | 🔄 需要轉換 | `.windsurf/rules/` |
-| Cline | 🔄 需要轉換 | `.clinerules/` |
+| Cursor | 🔄 需要转换 | `.cursor/rules/` |
+| Windsurf | 🔄 需要转换 | `.windsurf/rules/` |
+| Cline | 🔄 需要转换 | `.clinerules/` |
 
-### 安裝方式
+### 安装方式
 
-**透過 Agent 安裝（推薦）**
+**透过 Agent 安装（推荐）**
 
-在任何支援的 Agent 中直接說：
+在任何支援的 Agent 中直接说：
 ```
-安裝這個 skill：https://github.com/lauytgary/github-reader-skill
+安装这个 skill：https://github.com/lauytgary/github-reader-skill
 ```
 
-**透過 npx 安裝**
+**透过 npx 安装**
 ```bash
 npx skills add https://github.com/lauytgary/github-reader-skill
 ```
 
-**手動安裝**
+**手动安装**
 ```bash
 # Claude Code
 git clone https://github.com/lauytgary/github-reader-skill.git
@@ -147,16 +147,16 @@ cp -r github-reader-skill/github-reader ~/.agents/skills/
 cp -r github-reader-skill/github-reader ~/.gemini/skills/
 ```
 
-### 中國大陸用戶說明
+### 中国大陆用户说明
 
-`raw.githubusercontent.com` 在中國大陸受 GFW 間歇性封鎖。此 skill 的處理邏輯：
+`raw.githubusercontent.com` 在中国大陆受间歇性封锁。此 skill 的处理逻辑：
 
-1. 永遠先嘗試原始 URL
-2. 若失敗（逾時 / 連線重置），**先詢問你的批準**，再考慮切換到 `gh-proxy.com`
-3. 只有在你明確同意後才使用 proxy
-4. 若 proxy 也失敗，建議使用 VPN 或本地 `git clone`
+1. 永远先尝试原始 URL
+2. 若失败（逾时 / 连线重置），**先询问你的批准**，再考虑切换到 `gh-proxy.com`
+3. 只有在你明确同意后才使用 proxy
+4. 若 proxy 也失败，建议使用 VPN 或本地 `git clone`
 
 ### 作者
 
-由 **Gary Lau** 製作 · MIT 授權
+由 **Gary Lau** 制作 · MIT 授权
 
