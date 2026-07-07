@@ -19,7 +19,7 @@
 
 ---
 
-<h2 id="english-version">🇬🇧 English</h2>
+<h2 id="english-version">English</h2>
 
 <div align="right"><a href="#chinese-version">切換中文 →</a></div>
 
@@ -90,7 +90,7 @@ Made by **Gary Lau** · MIT License
 
 ---
 
-<h2 id="chinese-version">🇨🇳 中文</h2>
+<h2 id="chinese-version">中文</h2>
 
 <div align="right"><a href="#english-version">Switch to English →</a></div>
 
